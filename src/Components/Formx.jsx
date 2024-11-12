@@ -2,7 +2,7 @@ import React from 'react'
 
 const  Formx = () => {
     return (
-        <section className='contact'>
+        <div className='contact'>
             <form>
                 <h1>İletişim Formu</h1>
                 <div className='input-box'>
@@ -21,7 +21,7 @@ const  Formx = () => {
                 <p>        </p>
                 <button type='submit'>Gönder</button>
             </form>
-        </section>
+        </div>
     )
 }
 
