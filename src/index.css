@@ -37,66 +37,6 @@ input{
     position: relative;
     z-index: 0;
 }
-  
-
-  
-  /* Form Container */
-  .form-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 400px;
-  }
-  
-  .form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* Form Element Styling */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  .form-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .form-input:focus {
-    border-color: #4e73df;
-    outline: none;
-  }
-  
-  /* Submit Button */
-  .submit-btn {
-    background-color: #4e73df;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-  }
-  
-  .submit-btn:hover {
-    background-color: #2e59d9;
-  }
-  
 
 #egitim{
   width:100%;
@@ -108,17 +48,6 @@ input{
   position: relative;
   z-index: 0;
 }
-
-#form{
-    width:100%;
-    height:768px;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('./images/banner.png');
-    position: relative;
-    z-index: 0;
-  }
 
 #main::before{
     position: absolute;
@@ -448,47 +377,212 @@ nav .menu-btn,
   width: 600px;
 }
 
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./images/banner.png');
+    z-index: 0;
+}
 
-#contact{
-    width:100%;
-    display:flex;
+.packages {
+    display: flex;
+    flex-direction: column; /* Başlık ve paket kartlarını dikeyde sıralar */
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./images/banner.png');
+    z-index: 0;
 }
-#contact h1{
+
+.packages h1 {
+    font-size: 36px;
+    color: #333;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Paket kartlarını ortalamak için */
+.package-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Paket kartları stili */
+.package-card {
+    width: 250px;
+    background-color: #caf7c6;;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-card h2 {
+    font-size: 20px;
+    color: #0f8f3a;
+    margin: 15px 0 10px;
+}
+
+.package-card p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 10px 15px;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+/* Pop-up (Modal) stili */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 16px;
+    color: #666;
+}
+
+.popup-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #15a338;
     color: #fff;
-    font-size: 3rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
-#contact form{
-    width:600px;
-    display:flex;
+
+.popup-content button:hover {
+    background-color: #4ec68a;
+}
+
+form {
+    max-width: 500px;
+    width: 80%;
+    background: #caf7c6;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #333;
+    font-size: 16px; /* Tüm form içindeki yazı boyutu */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    display: flex;
+    margin-top: 50px;
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+form h1 {
+     /* Başlık boyutunu diğer yazılarla eşitleme */
+    text-align: center;
+    color: #0f8f3a;
+}
+
+form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box .field {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #04b94a;
+    outline: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 16px; /* Alan içindeki yazı boyutu */
+    color: #333;
+}
+
+.input-box .field-mess {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #04b94a;
+    outline: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 16px; /* Alan içindeki yazı boyutu */
+    color: #333;
+    height: 100px;
+    resize: none;
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    width: 50%;
+    height: 55px;
+    background: #15a338;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px; /* Buton yazı boyutu */
+    color: #fff;
+    font-weight: 500;
+    margin-top: 25px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin: 0 auto;
 }
-#contact form input,
-#contact form textarea{
-    width:100%;
-    height:50px;
-    margin:5px 0px;
-    padding: 10px;
-    border: none;
-    outline: none;
-    background-color: #ffffff2d;
-    color: #ffffff;
-    border-radius: 5px;
+
+form button:hover {
+    background: #036e38;
 }
-#contact form textarea{
-    height: 150px;
-}
-#contact form input[type="submit"]{
-    height: 45px;
-    background: linear-gradient(90deg, #0f8f3a 20%,#0088f7);
-    color: #ffffff;
-    text-transform: uppercase;
-}
+
 @media(max-width:620px){
     #contact form{
         width:90%;

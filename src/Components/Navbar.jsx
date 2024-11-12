@@ -31,9 +31,8 @@ function Navbar() {
             </label>
             <ul className='menu'>
                 <li><Link to='main' smooth={true} duration={500}>Anasayfa</Link></li>
-                <li><Link to='egitim' smooth={true} duration={500}>Faaliyetlerimiz</Link></li>
-                <li><Link to='/' smooth={true} duration={500}>Eğitimlerimiz</Link></li>
-                <li><Link to='form' smooth={true} duration={500}>Bize Ulaşın</Link></li>
+                <li><Link to='packages' smooth={true} duration={500}>Paketlerimiz</Link></li>
+                <li><Link to='contact' smooth={true} duration={500}>Bize Ulaşın</Link></li>
                 {/* Gereksiz tekrarları kaldırdım */}
             </ul>
         </nav>
