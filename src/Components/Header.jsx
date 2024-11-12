@@ -7,7 +7,7 @@ function Header() {
         
 <div className='name'>
     <h2>BİRLİKTE</h2>
-    <h1><span>GERİ</span> DÖNÜŞTÜRELİM</h1>
+    <h2><span>GERİ</span> DÖNÜŞTÜRELİM</h2>
     <p className='details'>Atıkları Değere Dönüştür, Geleceği Şekillendir!</p>
 </div>
 
